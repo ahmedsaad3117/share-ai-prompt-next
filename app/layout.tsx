@@ -8,18 +8,22 @@ export const metadata = {
     description: "Discover & Share AI Prompts"
 }
 
-const RootLayout = ({children} : any) => {
+const RootLayout = ({ children }: any) => {
     return (
         <html lang='en'>
             <body>
-                <div className='main'>
-                    <div className='gradient'></div>
-                </div>
+                {/* @ts-ignore */}
+                <Provider>
 
-                <main className='app'>
-                    <Nav/>
-                    {children}
-                </main>
+                    <div className='main'>
+                        <div className='gradient'></div>
+                    </div>
+
+                    <main className='app'>
+                        <Nav />
+                        {children}
+                    </main>
+                </Provider>
             </body>
         </html>
     )
