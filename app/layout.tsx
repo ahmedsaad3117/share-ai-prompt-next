@@ -1,5 +1,8 @@
 import '@styles/globals.css'
 
+import Nav from '@components/Nav'
+import Provider from '@components/Provider'
+
 export const metadata = {
     title: "AI Prompts",
     description: "Discover & Share AI Prompts"
@@ -14,7 +17,7 @@ const RootLayout = ({children} : any) => {
                 </div>
 
                 <main className='app'>
-                    {/* @ts-ignore */}
+                    <Nav/>
                     {children}
                 </main>
             </body>
